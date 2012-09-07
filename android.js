@@ -27,11 +27,23 @@
         }
         $('#container a').click(function(e){
             var url = e.target.href;
-            if (url.match(/jonathanstark.com/)) {
+            if (url.match(/jmellor.net/)) {
                 e.preventDefault();
                 loadPage(url);
             }
         });
         $('#progress').remove();
+    }
+function hijackLinks() {
+    $('#container a').click(function(e){
+        var url = e.target.href;
+if (url.match(/jmellor.net/)) {
+            e.preventDefault();
+            loadPage(url);
+        }
     });
+    var title = $('h2').html() || 'Hello!';
+    $('h1').html(title);
+    $('h2').remove();
+    $('#progress').remove();
 }
