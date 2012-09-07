@@ -1,13 +1,19 @@
 <html>
 <head>
 <title>My Awesome Page</title>
+<link rel="stylesheet" href="screen.css" type"text/css" />
+<script type ="text/javascript" charset="utf-8">
+function sayHello() {
+document.getElementById('foo').innerHTML = 'Hi there!';
+}
+</script>
 </head>
 <body>
-<h1>Hi there!</h1>
+<h1 id="foo" onclick ="sayHello()">click me!</h1>
 <p>Thanks for visiting my web page.</p>
 <p>I hope you like it</p>
 <ul>
-<li>Pizza</li>
+<li class="loud">Pizza</li>
 <li>Beer</li>
 <li>Dogs</li>
 </ul>
